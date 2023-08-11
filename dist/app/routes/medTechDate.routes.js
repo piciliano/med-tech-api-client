@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.medTechDateRouter = void 0;
+const express_1 = require("express");
+const medTechDateModule_1 = require("../../app/medTechDate/medTechDateModule");
+const medTechDateRouter = (0, express_1.Router)();
+exports.medTechDateRouter = medTechDateRouter;
+const medTechDateController = medTechDateModule_1.MedTechDateModule.build().controller;
+medTechDateRouter.post("", medTechDateController.create.bind(medTechDateController));
+medTechDateRouter.get("/find/:numero", medTechDateController.findByNumber.bind(medTechDateController));
+medTechDateRouter.delete("/delete/:numero", medTechDateController.deleteByNumber.bind(medTechDateController));
