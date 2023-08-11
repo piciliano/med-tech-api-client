@@ -3,12 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "type": "module",
   "engines":{
     "node": "18.x"
   },
   "scripts": {
-    "start": "node src/main.ts",
+    "start": "ts-node src/main.ts",
     "dev": "tsnd src/main.ts"
   },
   "keywords": [],
