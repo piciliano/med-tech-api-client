@@ -8,4 +8,8 @@ medTechDateRouter.post("", medTechDateController.create.bind(medTechDateControll
 medTechDateRouter.get("/find/:numero", medTechDateController.findByNumber.bind(medTechDateController));
 medTechDateRouter.delete("/delete/:numero", medTechDateController.deleteByNumber.bind(medTechDateController));
 
+medTechDateRouter.get("/ping", (req, res) => {
+    res.send("pong")
+});
+
 export { medTechDateRouter }
